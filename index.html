@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daniel Faustino | Engenheiro de Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1976d2;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #94a3b8;
+      --card: #111827;
+      --chip: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #020617, #020617);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(2,6,23,0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav a {
+      color: var(--gray);
+      margin-left: 24px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: var(--light);
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 1/1;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #1e293b, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--gray);
+      border: 1px solid #1e293b;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      color: var(--gray);
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    .hero .badges {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      background: var(--chip);
+      border: 1px solid #1e293b;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #cbd5f5;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 16px;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 32px;
+      font-weight: 800;
+    }
+
+    /* STACK */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .stack-card {
+      background: var(--card);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* EXPERIENCE */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .job {
+      background: var(--card);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .job h4 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .job span {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .job p {
+      margin-top: 12px;
+      color: #cbd5f5;
+    }
+
+    /* CONTENT */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .content-card {
+      background: var(--card);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .content-card h4 {
+      margin-bottom: 12px;
+    }
+
+    .content-card p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1e293b;
+      padding: 32px 16px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-pic {
+        margin: auto;
+      }
+      .hero .badges {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <h1>Daniel Faustino</h1>
+    <nav>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experiência</a>
+      <a href="#content">Conteúdo</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="profile-pic">
+    FOTO DE PERFIL
+  </div>
+
+  <div>
+    <h2>
+      Engenheiro de Software<br />
+      <span>Especialista em Angular</span>
+    </h2>
+    <p>
+      Transformando sistemas complexos em arquiteturas escaláveis através de
+      Engenharia Frontend, Micro-frontends e Cultura DevOps.
+    </p>
+
+    <div class="badges">
+      <div class="badge">Angular 2–21</div>
+      <div class="badge">Micro-frontends</div>
+      <div class="badge">Module Federation</div>
+      <div class="badge">Design Systems</div>
+      <div class="badge">CI/CD</div>
+      <div class="badge">Docker</div>
+      <div class="badge">Azure & GCP</div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <h3>Stack de Atuação</h3>
+  <div class="stack-grid">
+    <div class="stack-card">Angular / TypeScript</div>
+    <div class="stack-card">RxJS / NgRx</div>
+    <div class="stack-card">Micro-frontends</div>
+    <div class="stack-card">DDD no Frontend</div>
+    <div class="stack-card">Design Systems</div>
+    <div class="stack-card">Docker</div>
+    <div class="stack-card">CI/CD Pipelines</div>
+    <div class="stack-card">Azure / GCP</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h3>Experiência Profissional</h3>
+  <div class="timeline">
+    <div class="job">
+      <h4>Sicoob (via act digital)</h4>
+      <span>Analista Desenvolvedor III · 2025 — Atual</span>
+      <p>
+        Sistemas financeiros com Angular e Module Federation,
+        pipelines CI/CD on-premise e Docker.
+      </p>
+    </div>
+
+    <div class="job">
+      <h4>Via (Casas Bahia)</h4>
+      <span>Engenheiro de Software III · 2022 — 2025</span>
+      <p>
+        Micro-frontends de alta escala, Design System institucional
+        e deploys em Azure.
+      </p>
+    </div>
+
+    <div class="job">
+      <h4>Grupo Dimed (Panvel)</h4>
+      <span>Frontend Developer · 2019 — 2022</span>
+      <p>
+        Migração de monolito para Micro-frontends,
+        CI/CD e arquitetura frontend escalável.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <h3>Conteúdo Técnico</h3>
+  <div class="content-grid">
+    <div class="content-card">
+      <h4>📚 Artigos sobre Angular</h4>
+      <p>
+        Arquitetura frontend, Angular avançado,
+        Micro-frontends e boas práticas.
+      </p>
+    </div>
+
+    <div class="content-card">
+      <h4>🎥 Vídeos & Tutoriais</h4>
+      <p>
+        Tutoriais práticos sobre Angular,
+        Design Systems e DevOps no frontend.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 · Daniel Faustino · Engenharia Frontend & Arquitetura
+</footer>
+
+<script>
+  // JS reservado para futuras interações
+  console.log('Preview visual carregada');
+</script>
+
+</body>
+</html>
