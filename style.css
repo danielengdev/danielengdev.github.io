@@ -302,16 +302,12 @@ section h3 {
 }
 
 .job {
-  background:
-    linear-gradient(120deg, rgba(221, 0, 49, 0.32), rgba(185, 28, 28, 0.14)),
-    radial-gradient(520px 260px at 0% 0%, rgba(239, 68, 68, 0.25), transparent 60%),
-    radial-gradient(520px 260px at 100% 100%, rgba(248, 113, 113, 0.20), transparent 60%),
-    rgba(24, 5, 10, 0.96);
-  border: 1px solid rgba(221, 0, 49, 0.78);
+  background: rgba(10, 16, 36, 0.55);
+  border: 1px solid rgba(160, 190, 255, 0.14);
   border-radius: var(--radius-lg);
   padding: 24px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 22px 46px rgba(3, 7, 18, 0.9), 0 0 0 1px rgba(127, 29, 29, 0.6);
+  box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
@@ -321,7 +317,7 @@ section h3 {
   content: "";
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, rgba(221, 0, 49, 0.75), transparent 40%, rgba(248, 113, 113, 0.55));
+  background: linear-gradient(135deg, rgba(102, 243, 255, 0.14), transparent 40%, rgba(255, 79, 216, 0.12));
   opacity: 0;
   transition: opacity 220ms ease;
 }
@@ -389,10 +385,14 @@ section h3 {
   gap: 22px;
   padding: 22px;
   border-radius: var(--radius-lg);
-  background: rgba(10, 16, 36, 0.55);
-  border: 1px solid rgba(160, 190, 255, 0.14);
+  background:
+    linear-gradient(135deg, rgba(244, 63, 175, 0.35), rgba(129, 140, 248, 0.28)),
+    radial-gradient(520px 260px at 0% 0%, rgba(244, 63, 175, 0.32), transparent 60%),
+    radial-gradient(520px 260px at 100% 100%, rgba(139, 92, 246, 0.28), transparent 60%),
+    rgba(17, 6, 32, 0.96);
+  border: 1px solid rgba(244, 63, 175, 0.85);
   backdrop-filter: blur(12px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 46px rgba(3, 7, 18, 0.9), 0 0 0 1px rgba(127, 29, 29, 0.6);
   cursor: default;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
   position: relative;
@@ -403,7 +403,7 @@ section h3 {
   content: "";
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, rgba(102, 243, 255, 0.14), transparent 40%, rgba(255, 79, 216, 0.12));
+  background: linear-gradient(135deg, rgba(244, 63, 175, 0.9), transparent 40%, rgba(139, 92, 246, 0.7));
   opacity: 0;
   transition: opacity 220ms ease;
 }
