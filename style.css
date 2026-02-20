@@ -651,3 +651,105 @@ footer {
   }
 }
 
+/* CONTACT */
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: rgba(10, 16, 36, 0.55);
+  border: 1px solid rgba(160, 190, 255, 0.14);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(102, 243, 255, 0.14), transparent 40%, rgba(255, 79, 216, 0.12));
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card > * {
+  position: relative;
+}
+
+.contact-header {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(160, 190, 255, 0.12);
+}
+
+.contact-name {
+  font-size: 28px;
+  font-weight: 950;
+  letter-spacing: -0.4px;
+  margin-bottom: 8px;
+  color: var(--text);
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+}
+
+.contact-title {
+  font-size: 15px;
+  color: rgba(154, 166, 194, 0.95);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(10, 16, 36, 0.35);
+  border: 1px solid rgba(160, 190, 255, 0.12);
+  text-decoration: none;
+  color: rgba(234, 240, 255, 0.92);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(102, 243, 255, 0.22);
+  box-shadow: 0 0 0 1px rgba(102, 243, 255, 0.10), 0 0 24px rgba(102, 243, 255, 0.12);
+  background: rgba(102, 243, 255, 0.06);
+}
+
+.contact-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 14.5px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: 24px;
+  }
+  .contact-name {
+    font-size: 24px;
+  }
+  .contact-text {
+    font-size: 13px;
+  }
+}
+
