@@ -11,233 +11,8 @@
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #1976d2;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --gray: #94a3b8;
-      --card: #111827;
-      --chip: #1e293b;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(180deg, #020617, #020617);
-      color: var(--light);
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(2,6,23,0.8);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #1e293b;
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav h1 {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .nav a {
-      color: var(--gray);
-      margin-left: 24px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .nav a:hover {
-      color: var(--light);
-    }
-
-    /* HERO */
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 16px;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .profile-pic {
-      width: 100%;
-      max-width: 380px;
-      aspect-ratio: 1/1;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #1e293b, #020617);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--gray);
-      border: 1px solid #1e293b;
-    }
-
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .hero h2 {
-      font-size: 48px;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-
-    .hero h2 span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      color: var(--gray);
-      font-size: 18px;
-      max-width: 600px;
-    }
-
-    .hero .badges {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .badge {
-      background: var(--chip);
-      border: 1px solid #1e293b;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: #cbd5f5;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 16px;
-    }
-
-    section h3 {
-      font-size: 32px;
-      margin-bottom: 32px;
-      font-weight: 800;
-    }
-
-    /* STACK */
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-      gap: 6px;
-    }
-
-    .stack-card {
-      background: var(--card);
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 20px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    /* EXPERIENCE */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .job {
-      background: var(--card);
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 24px;
-    }
-
-    .job h4 {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .job span {
-      font-size: 14px;
-      color: var(--gray);
-    }
-
-    .job p {
-      margin-top: 12px;
-      color: #cbd5f5;
-    }
-
-    /* CONTENT */
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .content-card {
-      background: var(--card);
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 24px;
-    }
-
-    .content-card h4 {
-      margin-bottom: 12px;
-    }
-
-    .content-card p {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #1e293b;
-      padding: 32px 16px;
-      text-align: center;
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .profile-pic {
-        margin: auto;
-      }
-      .hero .badges {
-        justify-content: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -426,38 +201,157 @@
         CI/CD e arquitetura frontend escalável.
       </p>
     </div>
+    <div class="job">
+      <h4>Estadão</h4>
+      <span>Estratégias Digitais · Out/2017 — Dez/2022</span>
+      <p>
+        Desenvolvimento frontend focado em <b>performance</b>, aplicação de boas práticas de versionamento e integração contínua em ambiente ágil (Scrum).
+      </p>
+    </div>
   </div>
 </section>
-<!-- 
 <section id="content">
   <h3>Conteúdo Técnico</h3>
-  <div class="content-grid">
-    <div class="content-card">
-      <h4>📚 Artigos sobre Angular</h4>
-      <p>
-        Arquitetura frontend, Angular avançado,
-        Micro-frontends e boas práticas.
-      </p>
-    </div>
+  <div class="posts" aria-label="Lista de conteúdos técnicos">
+    <article class="post-card" data-url="https://medium.com/@deecomunicacao/angular-component-host-elements-c9c47e2bf61b">
+      <div class="post-main">
+        <h4 class="post-title">Angular Component Host Elements</h4>
+        <p class="post-excerpt">
+          O que são? Como implementar o binding para um Host element
+        </p>
+        <div class="post-meta">
+          <time datetime="2024-08-20">Aug 20, 2024</time>
+          <span class="post-tags" aria-label="Tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Host</span>
+            <span class="tag">Binding</span>
+          </span>
+        </div>
+      </div>
+      <div class="post-side">
+        <div class="post-actions" aria-label="Ações do conteúdo">
+          <button class="icon-btn" type="button" data-action="bookmark" aria-pressed="false" aria-label="Salvar nos favoritos">
+            <span class="material-icons" aria-hidden="true">bookmark_border</span>
+          </button>
+          <button class="icon-btn" type="button" data-action="more" aria-label="Mais ações">
+            <span class="material-icons" aria-hidden="true">more_horiz</span>
+          </button>
+        </div>
+        <div class="post-thumb" aria-hidden="true">
+          <div class="thumb thumb--pipes">
+            <div class="thumb-kicker">Angular</div>
+            <div class="thumb-title">HOST ELEMENTS</div>
+          </div>
+        </div>
+      </div>
+    </article>
 
-    <div class="content-card">
-      <h4>🎥 Vídeos & Tutoriais</h4>
-      <p>
-        Tutoriais práticos sobre Angular,
-        Design Systems e DevOps no frontend.
-      </p>
-    </div>
+    <article class="post-card" data-url="http://medium.com/@deecomunicacao/como-iniciar-no-frontend-um-guia-passo-a-passo-953c439db6cc">
+      <div class="post-main">
+        <h4 class="post-title">Como Iniciar no Frontend: Um Guia Passo a Passo</h4>
+        <p class="post-excerpt">
+          O desenvolvimento frontend é uma área empolgante e essencial no mundo da tecnologia da informação. É responsável por criar a interface do...
+        </p>
+        <div class="post-meta">
+          <time datetime="2024-08-20">Aug 20, 2024</time>
+          <span class="post-tags" aria-label="Tags">
+            <span class="tag">Frontend</span>
+            <span class="tag">Guia</span>
+            <span class="tag">Iniciantes</span>
+          </span>
+        </div>
+      </div>
+      <div class="post-side">
+        <div class="post-actions" aria-label="Ações do conteúdo">
+          <button class="icon-btn" type="button" data-action="bookmark" aria-pressed="false" aria-label="Salvar nos favoritos">
+            <span class="material-icons" aria-hidden="true">bookmark_border</span>
+          </button>
+          <button class="icon-btn" type="button" data-action="more" aria-label="Mais ações">
+            <span class="material-icons" aria-hidden="true">more_horiz</span>
+          </button>
+        </div>
+        <div class="post-thumb" aria-hidden="true">
+          <div class="thumb thumb--ops">
+            <div class="thumb-kicker">Guia</div>
+            <div class="thumb-title">Frontend</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post-card" data-url="https://medium.com/@deecomunicacao/fazendo-jus-ao-v%C3%ADdeo-da-giuliana-bezerra-resolvi-escrever-esse-artigo-na-verdade-esse-passo-a-passo-44f58018776f">
+      <div class="post-main">
+        <h4 class="post-title">Passo a passo para otimizar e consolidar o aprendizado</h4>
+        <p class="post-excerpt">
+          Fazendo jus ao vídeo da Giuliana Bezerra resolvi escrever esse artigo na verdade esse passo-a-passo para você utilizar na hora...
+        </p>
+        <div class="post-meta">
+          <time datetime="2024-08-20">Aug 20, 2024</time>
+          <span class="post-tags" aria-label="Tags">
+            <span class="tag">Aprendizado</span>
+            <span class="tag">Otimização</span>
+            <span class="tag">Estudo</span>
+          </span>
+        </div>
+      </div>
+      <div class="post-side">
+        <div class="post-actions" aria-label="Ações do conteúdo">
+          <button class="icon-btn" type="button" data-action="bookmark" aria-pressed="false" aria-label="Salvar nos favoritos">
+            <span class="material-icons" aria-hidden="true">bookmark_border</span>
+          </button>
+          <button class="icon-btn" type="button" data-action="more" aria-label="Mais ações">
+            <span class="material-icons" aria-hidden="true">more_horiz</span>
+          </button>
+        </div>
+        <div class="post-thumb" aria-hidden="true">
+          <div class="thumb thumb--err">
+            <div class="thumb-kicker">Aprendizado</div>
+            <div class="thumb-title">Otimizar</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post-card" data-url="https://medium.com/@deecomunicacao/angular-component-lifecycle-ec087b429ad0">
+      <div class="post-main">
+        <h4 class="post-title">
+          Angular. Component Lifecycle.
+        </h4>
+        <p class="post-excerpt">
+          O ciclo de vida de um componente Angular é a jornada que ele percorre desde sua criação até sua destruição. Essa jornada é...
+        </p>
+        <div class="post-meta">
+          <time datetime="2024-08-20">Aug 20, 2024</time>
+          <span class="post-tags" aria-label="Tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Lifecycle</span>
+            <span class="tag">Components</span>
+          </span>
+        </div>
+      </div>
+      <div class="post-side">
+        <div class="post-actions" aria-label="Ações do conteúdo">
+          <button class="icon-btn" type="button" data-action="bookmark" aria-pressed="false" aria-label="Salvar nos favoritos">
+            <span class="material-icons" aria-hidden="true">bookmark_border</span>
+          </button>
+          <button class="icon-btn" type="button" data-action="more" aria-label="Mais ações">
+            <span class="material-icons" aria-hidden="true">more_horiz</span>
+          </button>
+        </div>
+        <div class="post-thumb" aria-hidden="true">
+          <div class="thumb thumb--rxjs">
+            <div class="thumb-kicker">Angular</div>
+            <div class="thumb-title">LIFECYCLE</div>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
-</section> -->
+</section> 
 
 <footer>
   © 2026 · Daniel Faustino · Engenharia Frontend & Arquitetura
 </footer>
-
-<script>
-  // JS reservado para futuras interações
-  console.log('Preview visual carregada');
-</script>
 
 </body>
 </html>
